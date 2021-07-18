@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="440.0" prefWidth="600.0" style="-fx-background-color: C3FDB8;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="server.Controller">
+   <children>
+      <ListView fx:id="listView" layoutX="14.0" layoutY="94.0" prefHeight="266.0" prefWidth="229.0" />
+      <Label fx:id="output" layoutX="17.0" layoutY="406.0" prefHeight="20.0" prefWidth="565.0" text="Status" textFill="#000000c5" wrapText="true">
+         <font>
+            <Font size="10.0" />
+         </font></Label>
+      <ListView fx:id="listViewServer" layoutX="351.0" layoutY="94.0" prefHeight="266.0" prefWidth="229.0" />
+      <Button layoutX="259.0" layoutY="146.0" mnemonicParsing="false" onAction="#send" prefHeight="51.0" prefWidth="80.0" text="&gt;&gt;&gt;" textAlignment="CENTER" textFill="#4811c6" wrapText="true">
+         <font>
+            <Font size="11.0" />
+         </font>
+      </Button>
+      <Button layoutX="259.0" layoutY="240.0" mnemonicParsing="false" onAction="#receive" prefHeight="51.0" prefWidth="80.0" text="&lt;&lt;&lt;" textAlignment="CENTER" textFill="#c90fa7" wrapText="true">
+         <font>
+            <Font size="11.0" />
+         </font>
+      </Button>
+      <Button layoutX="17.0" layoutY="367.0" mnemonicParsing="false" onAction="#refreshClientList" prefHeight="25.0" prefWidth="55.0" style="-fx-background-color: #0f36fa4e;" text="update" textAlignment="CENTER" textFill="#3434a1" />
+      <Button layoutX="351.0" layoutY="367.0" mnemonicParsing="false" onAction="#refreshServerList" prefHeight="25.0" prefWidth="55.0" style="-fx-background-color: #0f36fa4e;" text="update" textAlignment="CENTER" textFill="#3434a1" wrapText="true" />
+      <Label layoutX="94.0" layoutY="69.0" prefHeight="18.0" prefWidth="71.0" text="CLIENT" textAlignment="CENTER" textFill="#686060" wrapText="true">
+         <font>
+            <Font name="Century" size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="437.0" layoutY="70.0" prefHeight="17.0" prefWidth="63.0" text="SERVER" textAlignment="CENTER" textFill="#686060" wrapText="true">
+         <font>
+            <Font name="Century" size="13.0" />
+         </font>
+      </Label>
+      <Button layoutX="94.0" layoutY="367.0" mnemonicParsing="false" onAction="#deleteFromClient" prefHeight="25.0" prefWidth="55.0" style="-fx-background-color: #fa82a698;" text="delete" textAlignment="CENTER" wrapText="true" />
+      <Button onAction="#deleteFromServer" layoutX="429.0" layoutY="367.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="55.0" style="-fx-background-color: #fa82a698;" text="delete" />
+   </children>
+</AnchorPane>
