@@ -1,0 +1,31 @@
+Описание проделанной работы:
+1. Проект доработан до объема кода 5 урока.
+2. Клиентская и серверная части дополнены методами открывания и удаления файлов. Методы отрабатывают свои задачи.
+3. Создан класс DeleteRequest.
+
+
+    Возникли трудности:
+     - с наполнением кейса DELETE_REQUEST в MessageHandler (отсутвует понимание, что писать).
+     Пока в кейсе задан такой код:
+                 case DELETE_REQUEST:
+                     DeleteRequest deleteRequest = (DeleteRequest) command;
+                     FileMessage msgDel = new FileMessage(currentPath.resolve(deleteRequest.getName()));
+                     ctx.writeAndFlush(msgDel);
+                     break;
+
+
+     - с обновлением серверного окна после удаления файла (какой параметр должен быть в
+     вызываемом методе refreshServerView(__?__)).
+     Вот метод удаления файла с сервера:
+        public void deleteFromServer(ActionEvent actionEvent) {
+             String fileName = serverView.getSelectionModel().getSelectedItem();
+
+             try {
+                 Files.delete(Paths.get(String.valueOf(Paths.get("server_dir").resolve(fileName))));
+             } catch (IOException e) {
+                 e.printStackTrace();
+             }
+          //  refreshServerView(?); // - в этом месте трудности
+
+         }
+
