@@ -51,8 +51,8 @@ public class ControllerRegUser {
 
             User user = new User(name, login, password);
 
-            dbHandler.registrationUser(user);
-            openNewScene("cloud-storage.fxml");
+            dbHandler.registrationUser(login, password, name);
+            openNewScene("/signUp-cloud-storage.fxml");
 
         }
 

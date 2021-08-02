@@ -2,7 +2,7 @@ package database;
 
 import java.sql.*;
 
-//connecting with database
+//connecting with handler.database
 public class DataBaseHandler extends Configs {
     Connection dbConnection;
 
@@ -25,7 +25,7 @@ public class DataBaseHandler extends Configs {
     }
 
     // регистрация нового пользователя в БД
-    public void registrationUser(User user) {
+    public void registrationUser(String login, String password, String name) {
         String insert = "INSERT INTO " + Const.USER_TABLE
                 + "(" + Const.USERS_NAME + ","
                 + Const.USERS_LOGIN + ","
@@ -33,9 +33,9 @@ public class DataBaseHandler extends Configs {
                 + "VALUES(?, ?, ?)";// запрос для помещения данных в БД
         try {
             PreparedStatement prSt = getDbConnection().prepareStatement(insert);
-            prSt.setString(1, user.getName());
-            prSt.setString(2, user.getLogin());
-            prSt.setString(3, user.getPassword());
+            prSt.setString(1, name);
+            prSt.setString(2, login);
+            prSt.setString(3, password);
 
             prSt.executeUpdate();
         } catch (SQLException | ClassNotFoundException e) {
@@ -65,5 +65,6 @@ public class DataBaseHandler extends Configs {
         }
         return resSet;
     }
+
 
 }

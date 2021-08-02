@@ -58,7 +58,7 @@ public class ControllerSignUp {
         });
 
         registration.setOnAction(event -> { // описываются события при нажатии на кнопку registration
-            openNewScene("regUser-cloud-storage.fxml");
+            openNewScene("/regUser-cloud-storage.fxml");
 
         });
 
@@ -79,7 +79,7 @@ public class ControllerSignUp {
         }
         if (counter >= 1) {
             //открывается окно основного приложения при успешной авторизации
-            openNewScene("cloud-storage.fxml");
+            openNewScene("/cloud-storage.fxml");
 
         } else {
             Shake userLoginAnim = new Shake(loginField);
