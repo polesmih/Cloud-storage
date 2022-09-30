@@ -2,14 +2,17 @@
 
 Клиент-серверное приложение написано на языке Java с использованием Netty. 
 В приложении реализованы функции регистрации и авторизации пользователей, загрузки, скачивания и удаления файлов с сервера. 
-Данные о зарегистрированных пользователях хрянятся в упрощенном варианте базы данных - SQLite файле. 
+Данные о зарегистрированных пользователях хрянятся в базе данных MySQL. 
 Оболочка приложения клиента сделана на JavaFx.
 
 # В проекте использованы:
-Java Netty
-JavaFx
-Java IO/NIO
-Java SQLite
+Java Netty, 
+JavaFx, 
+Java IO/NIO, 
+MySQL
 
-![image](https://user-images.githubusercontent.com/77875474/193044899-e042fad4-cabb-46d1-b233-f9ecb42d7375.png)
-![image](https://user-images.githubusercontent.com/77875474/193045024-d2642d49-8c3a-4b79-a62b-beb8296c7d35.png)
+Окно формы авторизации: ![image](https://user-images.githubusercontent.com/77875474/193044899-e042fad4-cabb-46d1-b233-f9ecb42d7375.png)
+
+Окно формы регистрации: ![Безымянный](https://user-images.githubusercontent.com/77875474/193205356-e0d2568c-78cd-4a74-a7ab-0eceaed37b11.jpg)
+
+Основнео окно приложения: ![image](https://user-images.githubusercontent.com/77875474/193045024-d2642d49-8c3a-4b79-a62b-beb8296c7d35.png)
