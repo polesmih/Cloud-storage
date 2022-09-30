@@ -16,3 +16,10 @@ MySQL
 Окно формы регистрации: ![Безымянный](https://user-images.githubusercontent.com/77875474/193205356-e0d2568c-78cd-4a74-a7ab-0eceaed37b11.jpg)
 
 Основнео окно приложения: ![image](https://user-images.githubusercontent.com/77875474/193045024-d2642d49-8c3a-4b79-a62b-beb8296c7d35.png)
+
+
+Видеопрезентация работы приложения:
+
+
+https://user-images.githubusercontent.com/77875474/193209312-81180173-9306-4638-a66e-29827a81a1cc.mp4
+
